@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "Piper"
   s.version      = "1.0.0"
-  s.summary      = "Sequential Queue-Oriented Operation Execution"
+  s.summary      = "Sequential Queue-Oriented Operations"
   s.description  = <<-DESC
-                    Sequential Queue-Oriented Operation Execution
+                    Simplify asynchronous operations.
                    DESC
   s.homepage     = "https://github.com/bradhilton/Piper"
   s.license      = { :type => "MIT", :file => "LICENSE" }
