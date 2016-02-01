@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "Sequential Queue-Oriented Operations"
   s.description  = <<-DESC
-                    Simplify asynchronous operations.
+                    Piper allows you to simplify your multi-threaded code for sequential operations.
                    DESC
   s.homepage     = "https://github.com/bradhilton/Piper"
   s.license      = { :type => "MIT", :file => "LICENSE" }
