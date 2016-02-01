@@ -34,8 +34,8 @@
 		A2750E931C5FDE250017FCAF = {
 			isa = PBXGroup;
 			children = (
-				A2750E9F1C5FDE250017FCAF /* Sources */,
 				A2750E9E1C5FDE250017FCAF /* Products */,
+				A2750E9F1C5FDE250017FCAF /* Sources */,
 				A2750EAA1C5FDED50017FCAF /* Piper.podspec */,
 			);
 			sourceTree = "<group>";
@@ -51,12 +51,11 @@
 		A2750E9F1C5FDE250017FCAF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A2750EA01C5FDE250017FCAF /* Piper.h */,
 				A2750EA21C5FDE250017FCAF /* Info.plist */,
+				A2750EA01C5FDE250017FCAF /* Piper.h */,
 				A2750EA81C5FDE5A0017FCAF /* Piper.swift */,
 			);
-			name = Sources;
-			path = Piper;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +241,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Piper/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.Piper;
@@ -260,7 +259,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Piper/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.Piper;
@@ -288,6 +287,7 @@
 				A2750EA71C5FDE250017FCAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
