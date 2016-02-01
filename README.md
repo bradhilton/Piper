@@ -15,4 +15,17 @@ background {
 }.main {
   // Display results on main queue...
 }.execute()
+```
+## Installation
+
+`Piper` is available through [CocoaPods](http://cocoapods.org). To install, simply include the following lines in your podfile:
+```ruby
+use_frameworks!
+pod 'Piper'
+```
+Be sure to import the module at the top of your .swift files:
+```swift
+import Piper
+```
+Alternatively, clone this repo or download it as a zip and include the classes in your project.
 
