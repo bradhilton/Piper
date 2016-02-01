@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A2750EA11C5FDE250017FCAF /* Piper.h in Headers */ = {isa = PBXBuildFile; fileRef = A2750EA01C5FDE250017FCAF /* Piper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2750EA91C5FDE5A0017FCAF /* Piper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2750EA81C5FDE5A0017FCAF /* Piper.swift */; };
+		A2750EAB1C5FDED50017FCAF /* Piper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2750EAA1C5FDED50017FCAF /* Piper.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A2750E9D1C5FDE250017FCAF /* Piper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Piper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2750EA01C5FDE250017FCAF /* Piper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Piper.h; sourceTree = "<group>"; };
 		A2750EA21C5FDE250017FCAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2750EA81C5FDE5A0017FCAF /* Piper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piper.swift; sourceTree = "<group>"; };
+		A2750EAA1C5FDED50017FCAF /* Piper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Piper.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,8 +34,9 @@
 		A2750E931C5FDE250017FCAF = {
 			isa = PBXGroup;
 			children = (
-				A2750E9F1C5FDE250017FCAF /* Piper */,
+				A2750E9F1C5FDE250017FCAF /* Sources */,
 				A2750E9E1C5FDE250017FCAF /* Products */,
+				A2750EAA1C5FDED50017FCAF /* Piper.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -43,12 +48,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A2750E9F1C5FDE250017FCAF /* Piper */ = {
+		A2750E9F1C5FDE250017FCAF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				A2750EA01C5FDE250017FCAF /* Piper.h */,
 				A2750EA21C5FDE250017FCAF /* Info.plist */,
+				A2750EA81C5FDE5A0017FCAF /* Piper.swift */,
 			);
+			name = Sources;
 			path = Piper;
 			sourceTree = "<group>";
 		};
@@ -120,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2750EAB1C5FDED50017FCAF /* Piper.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2750EA91C5FDE5A0017FCAF /* Piper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +237,7 @@
 		A2750EA61C5FDE250017FCAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -238,12 +248,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.Piper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A2750EA71C5FDE250017FCAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
