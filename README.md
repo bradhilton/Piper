@@ -29,3 +29,16 @@ import Piper
 ```
 Alternatively, clone this repo or download it as a zip and include the classes in your project.
 
+## Revision History
+
+* 1.0.0 - Initial Release
+
+## Author
+
+Brad Hilton, brad@skyvive.com
+
+## License
+
+Piper is available under the MIT license. See the LICENSE file for more info.
+
+
