@@ -10,7 +10,7 @@ import Foundation
 
 public protocol Finally {
     
-    typealias Result
+    associatedtype Result
     func finally(queue: NSOperationQueue, handler: Result -> Void)
     
 }
