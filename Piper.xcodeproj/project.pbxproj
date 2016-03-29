@@ -10,7 +10,19 @@
 		A2750EA11C5FDE250017FCAF /* Piper.h in Headers */ = {isa = PBXBuildFile; fileRef = A2750EA01C5FDE250017FCAF /* Piper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2750EA91C5FDE5A0017FCAF /* Piper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2750EA81C5FDE5A0017FCAF /* Piper.swift */; };
 		A2750EAB1C5FDED50017FCAF /* Piper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2750EAA1C5FDED50017FCAF /* Piper.podspec */; };
+		A2C98DDB1CAB3D5700218737 /* PiperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C98DDA1CAB3D5700218737 /* PiperTests.swift */; };
+		A2C98DDD1CAB3D5700218737 /* Piper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2750E9D1C5FDE250017FCAF /* Piper.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2C98DDE1CAB3D5700218737 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2750E941C5FDE250017FCAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2750E9C1C5FDE250017FCAF;
+			remoteInfo = Piper;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A2750E9D1C5FDE250017FCAF /* Piper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Piper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +30,9 @@
 		A2750EA21C5FDE250017FCAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2750EA81C5FDE5A0017FCAF /* Piper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piper.swift; sourceTree = "<group>"; };
 		A2750EAA1C5FDED50017FCAF /* Piper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Piper.podspec; sourceTree = "<group>"; };
+		A2C98DD81CAB3D5700218737 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C98DDA1CAB3D5700218737 /* PiperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiperTests.swift; sourceTree = "<group>"; };
+		A2C98DDC1CAB3D5700218737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,12 +43,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2C98DD51CAB3D5700218737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2C98DDD1CAB3D5700218737 /* Piper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		A2750E931C5FDE250017FCAF = {
 			isa = PBXGroup;
 			children = (
+				A2C98DD91CAB3D5700218737 /* Tests */,
 				A2750E9E1C5FDE250017FCAF /* Products */,
 				A2750E9F1C5FDE250017FCAF /* Sources */,
 				A2750EAA1C5FDED50017FCAF /* Piper.podspec */,
@@ -44,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				A2750E9D1C5FDE250017FCAF /* Piper.framework */,
+				A2C98DD81CAB3D5700218737 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +81,16 @@
 				A2750EA81C5FDE5A0017FCAF /* Piper.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		A2C98DD91CAB3D5700218737 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A2C98DDA1CAB3D5700218737 /* PiperTests.swift */,
+				A2C98DDC1CAB3D5700218737 /* Info.plist */,
+			);
+			name = Tests;
+			path = PiperTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,17 +125,39 @@
 			productReference = A2750E9D1C5FDE250017FCAF /* Piper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		A2C98DD71CAB3D5700218737 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2C98DE21CAB3D5700218737 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				A2C98DD41CAB3D5700218737 /* Sources */,
+				A2C98DD51CAB3D5700218737 /* Frameworks */,
+				A2C98DD61CAB3D5700218737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2C98DDF1CAB3D5700218737 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = PiperTests;
+			productReference = A2C98DD81CAB3D5700218737 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		A2750E941C5FDE250017FCAF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Brad Hilton";
 				TargetAttributes = {
 					A2750E9C1C5FDE250017FCAF = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					A2C98DD71CAB3D5700218737 = {
+						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
@@ -117,6 +174,7 @@
 			projectRoot = "";
 			targets = (
 				A2750E9C1C5FDE250017FCAF /* Piper */,
+				A2C98DD71CAB3D5700218737 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +185,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2750EAB1C5FDED50017FCAF /* Piper.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2C98DD61CAB3D5700218737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +206,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2C98DD41CAB3D5700218737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2C98DDB1CAB3D5700218737 /* PiperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2C98DDF1CAB3D5700218737 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2750E9C1C5FDE250017FCAF /* Piper */;
+			targetProxy = A2C98DDE1CAB3D5700218737 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A2750EA31C5FDE250017FCAF /* Debug */ = {
@@ -268,6 +349,30 @@
 			};
 			name = Release;
 		};
+		A2C98DE01CAB3D5700218737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = PiperTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.PiperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2C98DE11CAB3D5700218737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = PiperTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.PiperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -288,6 +393,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A2C98DE21CAB3D5700218737 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2C98DE01CAB3D5700218737 /* Debug */,
+				A2C98DE11CAB3D5700218737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

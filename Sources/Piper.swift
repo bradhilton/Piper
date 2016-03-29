@@ -23,6 +23,28 @@ public struct EmptyOperation : Finally {
     
 }
 
+public struct DelayOperation<Input : Finally> : Finally {
+    
+    var input: Input
+    var delay: Double
+    var queue: NSOperationQueue
+    
+    public func finally(queue: NSOperationQueue, handler: Input.Result -> Void) {
+        input.finally(self.queue) { input in
+            let dispatchDelay = dispatch_time(DISPATCH_TIME_NOW, Int64(self.delay * Double(NSEC_PER_SEC)))
+            let dispatchQueue = queue.underlyingQueue ?? dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)
+            dispatch_after(dispatchDelay, dispatchQueue) { handler(input) }
+        }
+    }
+    
+    init(input: Input, delay: Double, queue: NSOperationQueue = NSOperationQueue()) {
+        self.input = input
+        self.delay = delay
+        self.queue = queue
+    }
+    
+}
+
 public struct Operation<Input : Finally, Out> : Finally {
     
     var input: Input
@@ -36,6 +58,10 @@ public struct Operation<Input : Finally, Out> : Finally {
                 handler(out)
             }
         }
+    }
+    
+    public func after(delay: Double) -> Operation<DelayOperation<Operation>, Out> {
+        return Operation<DelayOperation<Operation>, Out>(input: DelayOperation(input: self, delay: delay), operation: { $0 }, queue: queue)
     }
     
     public func main<T>(operation: Out -> T) -> Operation<Operation, T> {
@@ -54,6 +80,11 @@ public struct Operation<Input : Finally, Out> : Finally {
         finally(NSOperationQueue()) { _ in }
     }
     
+}
+
+public func after(delay: Double) -> Operation<DelayOperation<EmptyOperation>, Void> {
+    let queue = NSOperationQueue()
+    return Operation<DelayOperation<EmptyOperation>, Void>(input: DelayOperation(input: EmptyOperation(), delay: delay), operation: { $0 }, queue: queue)
 }
 
 public func main<T>(operation: Void -> T) -> Operation<EmptyOperation, T> {
